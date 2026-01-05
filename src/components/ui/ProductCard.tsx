@@ -14,8 +14,8 @@ export function ProductCard({ product }: ProductCardProps) {
   const originalPrice = (product.price * 1.2).toFixed(2);
 
   return (
-    <div className="group relative flex flex-col justify-between overflow-hidden rounded-lg bg-white p-4 border border-transparent hover:border-[#00C6D7] transition-all duration-300 hover:shadow-lg">
-      <div className="relative aspect-square w-full mb-4 overflow-hidden rounded-lg bg-gray-100">
+    <div className="group relative flex flex-col justify-between overflow-hidden  bg-white p-4 border border-transparent hover:border-[#00C6D7] transition-all duration-300 hover:shadow-lg">
+      <div className="relative aspect-square w-full mb-4 overflow-hidden  bg-gray-100">
         <Image
           src={product.image}
           alt={product.title}
@@ -41,7 +41,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         
         <div className="mt-4">
-          <Button className="w-full rounded-full bg-[#00C6D7] hover:bg-[#009ca9]">
+          <Button className="w-full bg-[#00C6D7] hover:bg-[#009ca9]">
             Add to cart
           </Button>
         </div>
