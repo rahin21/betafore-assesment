@@ -60,18 +60,18 @@ export function Header() {
 
               {/* Icons */}
               <div className="flex items-center gap-5 text-white">
-                <Link href="/profile" className="hover:text-[#EDA415] transition-colors">
+                <Link href="/profile" className="hover:text-[#FDDE3B] transition-colors">
                   <User className="h-6 w-6" />
                 </Link>
                 
-                <Link href="/wishlist" className="hover:text-[#EDA415] transition-colors">
+                <Link href="/wishlist" className="hover:text-[#FDDE3B] transition-colors">
                   <Heart className="h-6 w-6" />
                 </Link>
                 
-                <Link href="/cart" className="relative hover:text-[#EDA415] transition-colors flex items-center gap-2">
+                <Link href="/cart" className="relative hover:text-[#FDDE3B] transition-colors flex items-center gap-2">
                   <div className="relative">
                     <img src="/cart-icon.svg" alt="Cart" className="h-6 w-6" />
-                    <span className="absolute -top-2 -right-2 bg-[#EDA415] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                    <span className="absolute -top-3 right-0 text-[#FDDE3B] text-md font-bold w-4 h-4 flex items-center justify-center">
                       3
                     </span>
                   </div>
@@ -90,26 +90,26 @@ export function Header() {
             {/* Left Side: Browse Category & Links */}
             <div className="flex items-center gap-8">
               {/* Browse Category */}
-              <div className="relative group hidden md:flex items-center gap-2 cursor-pointer hover:text-[#EDA415] transition-colors">
+              <div className="relative group hidden md:flex items-center gap-2 cursor-pointer hover:text-[#FDDE3B] transition-colors">
                 <Menu className="h-5 w-5" />
                 <span className="text-sm font-medium">Browse By Category</span>
               </div>
 
               {/* Nav Links */}
               <nav className="hidden md:flex items-center gap-6 text-xs font-medium">
-                <Link href="/" className="hover:text-[#EDA415] transition-colors">Home</Link>
-                <Link href="/installments" className="hover:text-[#EDA415] transition-colors">Easy Monthly Installments</Link>
-                <Link href="/brands" className="hover:text-[#EDA415] transition-colors">Shop by Brands</Link>
-                <Link href="/vendor" className="hover:text-[#EDA415] transition-colors">Become a Vendor</Link>
+                <Link href="/" className="hover:text-[#FDDE3B] transition-colors">Home</Link>
+                <Link href="/installments" className="hover:text-[#FDDE3B] transition-colors">Easy Monthly Installments</Link>
+                <Link href="/brands" className="hover:text-[#FDDE3B] transition-colors">Shop by Brands</Link>
+                <Link href="/vendor" className="hover:text-[#FDDE3B] transition-colors">Become a Vendor</Link>
               </nav>
             </div>
 
             {/* Right Side: Social Icons */}
             <div className="hidden md:flex items-center gap-4">
-              <a href="#" className="hover:text-[#EDA415] transition-colors"><Facebook className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-[#EDA415] transition-colors"><Twitter className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-[#EDA415] transition-colors"><Linkedin className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-[#EDA415] transition-colors"><Instagram className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-[#FDDE3B] transition-colors"><Facebook className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-[#FDDE3B] transition-colors"><Twitter className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-[#FDDE3B] transition-colors"><Linkedin className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-[#FDDE3B] transition-colors"><Instagram className="h-4 w-4" /></a>
             </div>
 
             {/* Mobile Menu Button */}

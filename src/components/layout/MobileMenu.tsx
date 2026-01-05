@@ -20,7 +20,7 @@ export function MobileMenu() {
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-50">
           <nav className="flex flex-col p-4 space-y-4">
             <button 
-              className="flex items-center gap-2 text-[#EDA415] font-medium text-left"
+              className="flex items-center gap-2 text-[#FDDE3B] font-medium text-left"
               onClick={() => setIsOpen(false)}
             >
               <Menu className="h-5 w-5" />

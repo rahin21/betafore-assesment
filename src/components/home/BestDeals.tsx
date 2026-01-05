@@ -12,8 +12,8 @@ export function BestDeals({ products }: BestDealsProps) {
       <Container>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
           <div className="flex items-center gap-2">
-            <h2 className="text-2xl font-bold text-[#03484D]">Best</h2>
-            <span className="text-2xl font-light text-[#03484D]">Deals</span>
+            <h2 className="text-2xl font-bold text-[#00C6D7]">Best</h2>
+            <span className="text-2xl font-light text-black">Deals</span>
           </div>
           
           <div className="flex overflow-x-auto pb-2 md:pb-0 gap-6 text-sm font-medium text-gray-500">
@@ -25,7 +25,7 @@ export function BestDeals({ products }: BestDealsProps) {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

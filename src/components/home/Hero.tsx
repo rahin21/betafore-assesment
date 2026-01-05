@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="relative w-full overflow-hidden min-h-[300px] md:min-h-[300px]">
+    <div className="relative w-full overflow-hidden min-h-[300px] md:min-h-[300px] ">
       {/* Background Image - fit to screen without zoom */}
       <div className="absolute inset-0 w-full h-full">
          <Image 

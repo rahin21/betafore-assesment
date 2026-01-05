@@ -16,7 +16,7 @@ export default async function Home() {
   // but we keep the fetch in case needed later or for other parts.
 
   // For the demo, we'll slice products for different sections
-  const arrivalProducts = products.slice(0, 5);
+  const arrivalProducts = products.slice(0, 6);
   const bestDealProducts = products.slice(5, 15);
 
   return (
