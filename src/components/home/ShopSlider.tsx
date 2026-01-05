@@ -38,15 +38,15 @@ export function ShopSlider() {
         {/* Navigation Arrows */}
         <button 
           onClick={scrollLeft}
-          className="absolute -left-20 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
+          className="absolute xl:-left-20 lg:-left-4 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
           aria-label="Previous"
         >
-          <Image src="/leftArrowSli.svg" alt="Previous" width={24} height={40} className="w-20 h-20" />
+          <Image src="/leftArrowSli.svg" alt="Previous" width={24} height={40} className="xl:w-20 xl:h-20 lg:w-10 lg:h-10" />
         </button>
 
         <button 
           onClick={scrollRight}
-          className="absolute -right-20 top-1/2 -translate-y-1/2 z-10 p-2  hidden md:block"
+          className="absolute xl:-right-20 lg:-right-4 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
           aria-label="Next"
         >
           <Image 
@@ -54,14 +54,14 @@ export function ShopSlider() {
             alt="Next" 
             width={24} 
             height={40} 
-            className="w-20 h-20 rotate-180" 
+            className="xl:w-20 xl:h-20 lg:w-10 lg:h-10 rotate-180" 
           />
         </button>
 
         {/* Slider Container */}
         <div 
           ref={containerRef}
-          className="flex gap-0 overflow-x-auto snap-x snap-mandatory pb-6 -ml-6 "
+          className="flex gap-0 overflow-x-auto snap-x snap-mandatory md:pb-6 md:-ml-6 "
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
 

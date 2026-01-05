@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "../ui/Container";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 
 export function Footer() {
   return (
@@ -26,10 +26,10 @@ export function Footer() {
             </div>
             
             <div className="flex gap-4 pt-4">
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><Facebook className="h-5 w-5" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><Twitter className="h-5 w-5" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><Linkedin className="h-5 w-5" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><Instagram className="h-5 w-5" /></a>
+              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaFacebookF className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaTwitter className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaLinkedinIn className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaInstagram className="h-5 w-5" /></a>
             </div>
           </div>
 

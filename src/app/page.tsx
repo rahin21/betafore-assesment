@@ -20,7 +20,7 @@ export default async function Home() {
   const bestDealProducts = products.slice(5, 15);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       <Hero />
       <ShopSlider />
       <NewArrivals products={arrivalProducts} />
