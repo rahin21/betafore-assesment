@@ -5,7 +5,7 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#393939] text-white pt-16 overflow-hidden">
+    <footer className="relative z-20 w-full bg-[#393939] text-white pt-20 -mt-2 transform-gpu">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
           {/* Brand & Contact */}
@@ -76,16 +76,16 @@ export function Footer() {
         {/* Payment Icons row aligned right */}
         <div className="flex justify-end items-center gap-4 pb-10">
           <div className="bg-white rounded-md px-3 py-2 shadow-sm">
-            <Image src="/footer-Icons/visa-icon.svg" alt="VISA" width={124} height={52} className="h-[52px] w-auto" />
+            <Image src="/footer-Icons/visa-icon.svg" alt="VISA" width={124} height={52} className="h-[52px] w-auto" style={{ width: "auto" }} />
           </div>
           <div className="bg-white rounded-md px-3 py-2 shadow-sm">
-            <Image src="/footer-Icons/mastercard-icon.svg" alt="MasterCard" width={94} height={52} className="h-[52px] w-auto" />
+            <Image src="/footer-Icons/mastercard-icon.svg" alt="MasterCard" width={94} height={52} className="h-[52px] w-auto" style={{ width: "auto" }} />
           </div>
           <div className="bg-white rounded-md px-3 py-2 shadow-sm">
-            <Image src="/footer-Icons/cashOnDelivery-icon.svg" alt="Cash On Delivery" width={120} height={52} className="h-[52px] w-auto" />
+            <Image src="/footer-Icons/cashOnDelivery-icon.svg" alt="Cash On Delivery" width={120} height={52} className="h-[52px] w-auto" style={{ width: "auto" }} />
           </div>
           <div className="bg-white rounded-md px-3 py-2 shadow-sm">
-            <Image src="/footer-Icons/easyInstallmentPlans.svg" alt="Easy Installment Plans" width={140} height={56} className="h-[56px] w-auto" />
+            <Image src="/footer-Icons/easyInstallmentPlans.svg" alt="Easy Installment Plans" width={140} height={56} className="h-[56px] w-auto" style={{ width: "auto" }} />
           </div>
         </div>
       </Container>

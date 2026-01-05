@@ -38,15 +38,15 @@ export function ShopSlider() {
         {/* Navigation Arrows */}
         <button 
           onClick={scrollLeft}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 hidden md:block"
+          className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
           aria-label="Previous"
         >
-          <Image src="/leftArrowSli.svg" alt="Previous" width={24} height={40} className="w-6 h-10" />
+          <Image src="/leftArrowSli.svg" alt="Previous" width={24} height={40} className="w-20 h-20" />
         </button>
 
         <button 
           onClick={scrollRight}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 hidden md:block"
+          className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 p-2  hidden md:block"
           aria-label="Next"
         >
           <Image 
@@ -54,7 +54,7 @@ export function ShopSlider() {
             alt="Next" 
             width={24} 
             height={40} 
-            className="w-6 h-10 rotate-180" 
+            className="w-20 h-20 rotate-180" 
           />
         </button>
 
@@ -67,7 +67,7 @@ export function ShopSlider() {
           {categories.map((cat, index) => (
             <motion.div 
               key={index}
-              className="relative min-w-[280px] md:min-w-[320px] lg:min-w-[350px] aspect-[1.4] shrink-0 snap-start shadow-sm rounded-sm overflow-hidden"
+              className="relative min-w-[280px] md:min-w-[320px] lg:min-w-[350px] aspect-[1.4] shrink-0 snap-start shadow-sm rounded-sm overflow-visible"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
@@ -76,17 +76,25 @@ export function ShopSlider() {
                   src={cat.image}
                   alt={cat.name}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover z-20"
                 />
+                {/* Corner Fold  */}
+                <div 
+                  className="absolute bottom-[82.5px] left-[13px] w-[8.05px] h-[20.06px] bg-[#220F0F] z-10 pointer-events-none"
+                  style={{ transform: "rotate(-115.94deg)", transformOrigin: "bottom left" }}
+                ></div>
                 
                 {/* Text Bar */}
-                <div className="absolute bottom-6 left-0 w-3/4 bg-white/95 backdrop-blur-sm px-6 py-3 flex items-center justify-between shadow-sm">
-                   <span className="text-lg font-normal text-[#2E2E2E] truncate pr-2">
-                     {cat.name}
-                   </span>
-                   <span className="text-sm font-medium text-[#00C6D7] uppercase tracking-wide cursor-pointer hover:underline">
-                     Shop
-                   </span>
+                <div className="absolute bottom-8 left-[-9px] w-[270px] h-[49px] bg-gradient-to-r from-white to-white/85 shadow-[0px_1px_7px_0px_#00000091] flex items-center px-[15px] gap-[10px] z-30">
+                   <div className="flex items-center justify-between w-full">
+                     <span className="text-[25px] leading-[53px] font-normal text-[#000000] truncate">
+                       {cat.name}
+                     </span>
+                     <span className="text-[21px] leading-[53px] font-normal text-[#14B1F0] cursor-pointer hover:underline whitespace-nowrap">
+                       Shop
+                     </span>
+                   </div>
                 </div>
               </div>
             </motion.div>

@@ -8,8 +8,6 @@ interface CategoryShowcaseProps {
 }
 
 export function CategoryShowcase({ categories }: CategoryShowcaseProps) {
-  // Map API categories to images/styles (simulated)
-  // Since we don't have real images for each category, we'll use colors or placeholders
   
   return (
     <div className="py-12 bg-white relative">
