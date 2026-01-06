@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "../ui/Container";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 
 export function Footer() {
   return (
@@ -10,8 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
           {/* Brand & Contact */}
           <div className="space-y-6">
-            <Link href="/" className="block mb-6 h-10 w-32">
-              <img src="/winStore-Icon.svg" alt="Winstore" className="w-full h-full object-contain" />
+            <Link href="/" className="block mb-6 h-10 w-32 relative">
+              <Image src="/winStore-Icon.svg" alt="Winstore" fill className="object-contain" />
             </Link>
             
             <div className="space-y-2">

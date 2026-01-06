@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Search, User, Heart, Menu, ChevronDown } from "lucide-react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { Container } from "../ui/Container";
 import { MobileMenu } from "./MobileMenu";
 
@@ -18,12 +19,11 @@ export function Header() {
 
             {/* Logo */}
             <Link href="/" className="block relative h-10 w-32 shrink-0">
-               {/* Using text fallback for exact Figma match if SVG isn't perfect, but prompt said use SVG. 
-                   I will use the SVG but ensure it's sized correctly. */}
-               <img 
+               <Image 
                  src="/winStore-Icon.svg" 
                  alt="win store" 
-                 className="w-full h-full object-contain brightness-0 invert" 
+                 fill
+                 className="object-contain brightness-0 invert" 
                />
             </Link>
 
@@ -56,7 +56,7 @@ export function Header() {
               <div className="hidden md:flex flex-col items-start text-white leading-tight text-left">
                 <span className="text-[10px] font-light">Call Us Now</span>
                 <div className="flex items-center gap-2 justify-start">
-                   <img src="/headphone-icon.png" alt="Headphone" className="h-4 w-4 opacity-90" />
+                   <Image src="/headphone-icon.png" alt="Headphone" width={16} height={16} className="opacity-90" />
                    <span className="text-sm font-semibold">+011 5827918</span>
                 </div>
                 <Link href="/signin" className="text-[12px] hover:underline mt-0.5">
@@ -76,7 +76,7 @@ export function Header() {
                 
                 <Link href="/cart" className="relative hover:text-[#FDDE3B] transition-colors flex items-center gap-2">
                   <div className="relative">
-                    <img src="/cart-icon.svg" alt="Cart" className="h-6 w-6" />
+                    <Image src="/cart-icon.svg" alt="Cart" width={24} height={24} className="h-6 w-6" />
                     <span className="absolute -top-3 right-0 text-[#FDDE3B] text-md font-bold w-4 h-4 flex items-center justify-center">
                       3
                     </span>

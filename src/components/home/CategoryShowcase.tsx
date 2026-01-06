@@ -22,7 +22,7 @@ export function CategoryShowcase({ categories }: CategoryShowcaseProps) {
           </button>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <div key={category.id} className="relative group overflow-hidden rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="aspect-4/3 bg-gray-100 relative">
                    {/* Placeholder Image */}

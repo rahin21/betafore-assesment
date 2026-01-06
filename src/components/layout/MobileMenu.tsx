@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 
@@ -61,7 +62,7 @@ export function MobileMenu() {
                  <div className="flex flex-col gap-1">
                    <span className="text-xs text-gray-500 font-light">Call Us Now</span>
                    <div className="flex items-center gap-2 text-gray-700">
-                      <img src="/headphone-icon.png" alt="Headphone" className="h-7 w-7 bg-[#03484D] rounded-full p-1" />
+                      <Image src="/headphone-icon.png" alt="Headphone" width={28} height={28} className="bg-[#03484D] rounded-full p-1" />
                       <span className="text-sm font-semibold">+011 5827918</span>
                    </div>
                  </div>
