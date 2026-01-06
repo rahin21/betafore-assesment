@@ -11,7 +11,7 @@ export function NewArrivals({ products }: NewArrivalsProps) {
     <div className="py-12 bg-white">
       <Container>
         <div className="flex items-center gap-2 mb-8">
-          <h2 className="text-2xl font-bold text-[#00C6D7]">New</h2>
+          <h2 className="text-2xl font-normal text-[#00C6D7]">New</h2>
           <span className="text-2xl font-light text-black">Arrivals</span>
         </div>
         

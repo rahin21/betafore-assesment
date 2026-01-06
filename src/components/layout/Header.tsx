@@ -56,7 +56,7 @@ export function Header() {
               <div className="hidden md:flex flex-col items-start text-white leading-tight text-left">
                 <span className="text-[10px] font-light">Call Us Now</span>
                 <div className="flex items-center gap-2 justify-start">
-                   <img src="/headphone-icon.png" alt="Headphone" className="h-5 w-5 opacity-90" />
+                   <img src="/headphone-icon.png" alt="Headphone" className="h-4 w-4 opacity-90" />
                    <span className="text-sm font-semibold">+011 5827918</span>
                 </div>
                 <Link href="/signin" className="text-[12px] hover:underline mt-0.5">

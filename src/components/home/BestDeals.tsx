@@ -12,7 +12,7 @@ export function BestDeals({ products }: BestDealsProps) {
       <Container>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
           <div className="flex items-center gap-2">
-            <h2 className="text-2xl font-bold text-[#00C6D7]">Best</h2>
+            <h2 className="text-2xl font-normal text-[#00C6D7]">Best</h2>
             <span className="text-2xl font-light text-black">Deals</span>
           </div>
           
