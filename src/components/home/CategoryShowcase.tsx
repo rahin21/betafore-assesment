@@ -14,17 +14,17 @@ export function CategoryShowcase({ categories }: CategoryShowcaseProps) {
       <Container>
         <div className="relative">
           {/* Navigation Arrows */}
-          <button className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
+          <button className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
+          <button className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full  items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
             <ChevronRight className="w-6 h-6" />
           </button>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <div key={category.id} className="relative group overflow-hidden rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="aspect-[4/3] bg-gray-100 relative">
+                <div className="aspect-4/3 bg-gray-100 relative">
                    {/* Placeholder Image */}
                    <div className="absolute inset-0 flex items-center justify-center text-gray-300 text-4xl font-bold uppercase tracking-widest opacity-20 select-none">
                       {category.name.substring(0, 2)}

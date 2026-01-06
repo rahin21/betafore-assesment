@@ -10,7 +10,6 @@ const categories = [
   { name: "Fashion", image: "/shop-slider/FashionShopImage.png" },
   { name: "Appliances", image: "/shop-slider/AppliancesShopImage.png" },
   { name: "Babies Store", image: "/shop-slider/BabiesStoreShopImage.png" },
-  // Adding more to demonstrate slider capability if needed, or loop these
   { name: "Home & Lifestyle", image: "/shop-slider/HomeLivestyleShop.png" },
   { name: "WinMart", image: "/shop-slider/WinMartShopImage.png" },
 ];
