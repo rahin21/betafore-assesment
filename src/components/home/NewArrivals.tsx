@@ -14,7 +14,7 @@ export function NewArrivals({ products }: NewArrivalsProps) {
     <motion.div className="py-12 bg-white" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
       <Container>
         <div className="flex items-center gap-2 mb-8">
-          <h2 className="text-2xl font-normal text-[#00C6D7]">New</h2>
+          <h2 className="text-2xl font-normal text-brand">New</h2>
           <span className="text-2xl font-light text-black">Arrivals</span>
         </div>
         

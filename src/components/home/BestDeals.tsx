@@ -47,7 +47,7 @@ export function BestDeals({ products: initialProducts, categories }: BestDealsPr
       <Container>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
           <div className="flex items-center gap-2">
-            <h2 className="text-2xl font-normal text-[#00C6D7]">Best</h2>
+            <h2 className="text-2xl font-normal text-brand">Best</h2>
             <span className="text-2xl font-light text-black">Deals</span>
           </div>
           
@@ -63,8 +63,8 @@ export function BestDeals({ products: initialProducts, categories }: BestDealsPr
                  className={clsx(
                    "pb-1 whitespace-nowrap transition-colors",
                    selectedCategory === cat.name 
-                     ? "text-[#00C6D7] border-b-2 border-[#00C6D7]" 
-                     : "hover:text-[#03484D]"
+                    ? "text-brand border-b-2 border-brand" 
+                    : "hover:text-teal-dark"
                  )}
                  role="tab"
                  aria-selected={selectedCategory === cat.name}

@@ -14,7 +14,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
           "h-10 py-2 px-4",
           {
-            "bg-[#00C6D7] text-white hover:bg-[#00b0bf]": variant === "primary",
+            "bg-brand text-white hover:bg-brand-dark": variant === "primary",
             "border border-input hover:bg-accent hover:text-accent-foreground": variant === "outline",
             "hover:bg-accent hover:text-accent-foreground": variant === "ghost",
           },

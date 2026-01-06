@@ -16,10 +16,10 @@ export function Hero() {
     return () => clearInterval(id);
   }, [desktopSlides.length]);
   return (
-    <div className="relative w-full overflow-hidden bg-[#F3EDC9]">
+    <div className="relative w-full overflow-hidden bg-hero-bg">
       <div className="flex flex-col lg:hidden">
         <motion.div
-          className="relative w-full aspect-2/1 bg-[#F3EDC9]"
+          className="relative w-full aspect-2/1 bg-hero-bg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
@@ -38,7 +38,7 @@ export function Hero() {
             <button
               key={i}
               onClick={() => setSlide(i)}
-              className={`h-2 w-6 rounded-full ${i === slide ? "bg-[#03484D]" : "bg-[#A3A3A3]"}`}
+              className={`h-2 w-6 rounded-full ${i === slide ? "bg-teal-dark" : "bg-gray"}`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
@@ -51,18 +51,18 @@ export function Hero() {
           transition={{ duration: 0.4, delay: 0.1 }}
         >
           <motion.h1 
-            className="text-4xl font-light text-[#2E2E2E] leading-tight"
+            className="text-4xl font-light text-text leading-tight"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            Shop <span className="text-[#00C6D7]">Computer</span>
+            Shop <span className="text-brand">Computer</span>
             <br />
-            <span className="text-[#00C6D7]">& experience</span>
+            <span className="text-brand">& experience</span>
           </motion.h1>
           
           <motion.p 
-            className="text-sm text-[#2E2E2E] opacity-80 leading-relaxed font-medium max-w-md mx-auto"
+            className="text-sm text-text opacity-80 leading-relaxed font-medium max-w-md mx-auto"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
@@ -77,7 +77,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
-            <Button className="bg-[#00C6D7] hover:bg-[#00b0bf] text-white px-10 py-6 rounded-[10px] text-lg font-medium shadow-none transition-transform active:scale-95">
+            <Button className="bg-brand hover:bg-brand-dark text-white px-10 py-6 rounded-[10px] text-lg font-medium shadow-none transition-transform active:scale-95">
               View More
             </Button>
           </motion.div>
@@ -91,7 +91,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-           <Image 
+          <Image 
               src={desktopSlides[slide]} 
               alt="Hero Background" 
               fill
@@ -100,10 +100,10 @@ export function Hero() {
            />
            <div className="absolute lg:bottom-6 left-0 right-0 flex items-center justify-center gap-3">
              {desktopSlides.map((_, i) => (
-               <button
+              <button
                  key={i}
                  onClick={() => setSlide(i)}
-                 className={`h-2 w-8 rounded-full ${i === slide ? "bg-[#03484D]" : "bg-[#A3A3A3]"}`}
+                className={`h-2 w-8 rounded-full ${i === slide ? "bg-teal-dark" : "bg-gray"}`}
                  aria-label={`Go to slide ${i + 1}`}
                />
              ))}
@@ -119,19 +119,19 @@ export function Hero() {
           >
             <div className="space-y-2">
               <motion.h1 
-                className="text-4xl lg:text-3xl xl:text-[64px]  leading-[1.1] text-[#2E2E2E]"
+                className="text-4xl lg:text-3xl xl:text-[64px]  leading-[1.1] text-text"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
               >
                 <span className="font-light">Shop </span> 
-                <span className="font-light text-[#00C6D7]">Computer</span> 
+                <span className="font-light text-brand">Computer</span> 
                 <br />
-                <span className="font-light text-[#00C6D7]">& experience</span>
+                <span className="font-light text-brand">& experience</span>
               </motion.h1>
               
               <motion.p 
-                className="text-sm xl:text-base text-[#2E2E2E] max-w-md opacity-80 leading-relaxed font-medium"
+                className="text-sm xl:text-base text-text max-w-md opacity-80 leading-relaxed font-medium"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 }}
@@ -146,7 +146,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
               >
-                <Button className="bg-[#00C6D7] hover:bg-[#00b0bf] text-white px-10 py-6 rounded-[10px] text-lg font-medium shadow-none transition-transform active:scale-95">
+                <Button className="bg-brand hover:bg-brand-dark text-white px-10 py-6 rounded-[10px] text-lg font-medium shadow-none transition-transform active:scale-95">
                   View More
                 </Button>
               </motion.div>

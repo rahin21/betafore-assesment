@@ -5,7 +5,7 @@ import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/f
 
 export function Footer() {
   return (
-    <footer className="relative z-20 w-full bg-[#393939] text-white pt-20 -mt-2 transform-gpu">
+    <footer className="relative z-20 w-full bg-footer-bg text-white pt-20 -mt-2 transform-gpu">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
           {/* Brand & Contact */}
@@ -15,28 +15,28 @@ export function Footer() {
             </Link>
             
             <div className="space-y-2">
-              <p className="text-[#00C6D7] font-medium">Got questions? Call us 24/7!</p>
+              <p className="text-brand font-medium">Got questions? Call us 24/7!</p>
               <p className="text-base">03 111 666 144</p>
               <p className="text-base">0317 1777015</p>
             </div>
             
-            <div className="space-y-2 text-[#BFBFBF]">
-              <p className="font-medium text-[#00C6D7]">Contact info</p>
+            <div className="space-y-2 text-footer-muted">
+              <p className="font-medium text-brand">Contact info</p>
               <p className="">info@winstore.pk</p>
             </div>
             
             <div className="flex gap-4 pt-4">
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaFacebookF className="h-6 w-6" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaTwitter className="h-6 w-6" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaLinkedinIn className="h-6 w-6" /></a>
-              <a href="#" className="hover:text-[#00C6D7] transition-colors"><FaInstagram className="h-5 w-5" /></a>
+              <a href="#" className="hover:text-brand transition-colors"><FaFacebookF className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-brand transition-colors"><FaTwitter className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-brand transition-colors"><FaLinkedinIn className="h-6 w-6" /></a>
+              <a href="#" className="hover:text-brand transition-colors"><FaInstagram className="h-5 w-5" /></a>
             </div>
           </div>
 
           {/* Trending */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-[#00C6D7]">Trending</h3>
-            <ul className="space-y-3 text-[#BFBFBF]">
+            <h3 className="text-lg font-semibold mb-6 text-brand">Trending</h3>
+            <ul className="space-y-3 text-footer-muted">
               <li><Link href="#" className="hover:text-white">Installments</Link></li>
               <li><Link href="#" className="hover:text-white">Electronics</Link></li>
               <li><Link href="#" className="hover:text-white">Grocery</Link></li>
@@ -48,8 +48,8 @@ export function Footer() {
 
           {/* Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-[#00C6D7]">Information</h3>
-            <ul className="space-y-3 text-[#BFBFBF]">
+            <h3 className="text-lg font-semibold mb-6 text-brand">Information</h3>
+            <ul className="space-y-3 text-footer-muted">
               <li><Link href="#" className="hover:text-white">About Us</Link></li>
               <li><Link href="#" className="hover:text-white">Contact Us</Link></li>
               <li><Link href="#" className="hover:text-white">FAQs</Link></li>
@@ -61,8 +61,8 @@ export function Footer() {
 
           {/* Customer Care */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-[#00C6D7]">Customer Care</h3>
-            <ul className="space-y-3 text-[#BFBFBF]">
+            <h3 className="text-lg font-semibold mb-6 text-brand">Customer Care</h3>
+            <ul className="space-y-3 text-footer-muted">
               <li><Link href="#" className="hover:text-white">My Account</Link></li>
               <li><Link href="#" className="hover:text-white">Track Your Order</Link></li>
               <li><Link href="#" className="hover:text-white">Recently Viewed</Link></li>
@@ -91,7 +91,7 @@ export function Footer() {
       </Container>
       
       {/* All rights bar */}
-      <div className="bg-[#161616] py-4">
+      <div className="bg-footer-bottom py-4">
         <Container>
           <p className="text-white/85 text-sm">© 2021 Winstore. All Rights Reserved.</p>
         </Container>

@@ -51,7 +51,7 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
   return (
     <div className="relative bg-white py-4 group">
 			 {/* Bottom gradient from #F3EDC9 to #FFFFFF */}
-      <div className="pointer-events-none absolute top-0 left-0 right-0 h-24 md:h-58 bg-linear-to-t from-white to-[#F3EDC9] -mt-2"></div>
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-24 md:h-58 bg-linear-to-t from-white to-hero-bg -mt-2"></div>
       <Container className="relative">
         {/* Navigation Arrows */}
         <motion.button 
@@ -108,17 +108,17 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
                 />
                 {/* Corner Fold  */}
                 <div 
-                  className="absolute bottom-[82.5px] left-[13px] w-[8.05px] h-[20.06px] bg-[#220F0F] z-10 pointer-events-none"
+                  className="absolute bottom-[82.5px] left-[13px] w-[8.05px] h-[20.06px] bg-brown z-10 pointer-events-none"
                   style={{ transform: "rotate(-115.94deg)", transformOrigin: "bottom left" }}
                 ></div>
                 
                 {/* Text Bar */}
                 <div className="absolute bottom-8 left-[-9px] w-[220px] md:w-[95%] xl:w-[300px] h-[49px] bg-linear-to-r from-white to-white/85 shadow-[0px_1px_7px_0px_#00000091] flex items-center px-[15px] gap-[10px] z-30">
                    <div className="flex items-center justify-between w-full">
-                     <span className="text-[25px] md:text-[16px] lg:text-[25px] leading-[53px] font-normal text-[#000000] truncate capitalize">
+                     <span className="text-[25px] md:text-[16px] lg:text-[25px] leading-[53px] font-normal text-black truncate capitalize">
                        {cat.name}
                      </span>
-                     <span className="text-[21px] md:text-[14px] lg:text-[21px] leading-[53px] font-normal text-[#14B1F0] cursor-pointer hover:underline whitespace-nowrap">
+                     <span className="text-[21px] md:text-[14px] lg:text-[21px] leading-[53px] font-normal text-link cursor-pointer hover:underline whitespace-nowrap">
                        Shop
                      </span>
                    </div>

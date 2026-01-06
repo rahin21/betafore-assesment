@@ -14,10 +14,10 @@ export function CategoryShowcase({ categories }: CategoryShowcaseProps) {
       <Container>
         <div className="relative">
           {/* Navigation Arrows */}
-          <button className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
+          <button className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full items-center justify-center text-gray-500 hover:text-brand hidden lg:flex">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full  items-center justify-center text-gray-500 hover:text-[#00C6D7] hidden lg:flex">
+          <button className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-md rounded-full  items-center justify-center text-gray-500 hover:text-brand hidden lg:flex">
             <ChevronRight className="w-6 h-6" />
           </button>
 
@@ -32,10 +32,10 @@ export function CategoryShowcase({ categories }: CategoryShowcaseProps) {
                 </div>
                 
                 <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg flex items-center justify-between">
-                  <span className="font-semibold capitalize text-[#03484D] truncate mr-2">
+                  <span className="font-semibold capitalize text-teal-dark truncate mr-2">
                     {category.name}
                   </span>
-                  <span className="text-xs text-gray-500 font-medium whitespace-nowrap group-hover:text-[#00C6D7]">
+                  <span className="text-xs text-gray-500 font-medium whitespace-nowrap group-hover:text-brand">
                     Shop
                   </span>
                 </div>

@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <motion.div 
-      className="group relative flex flex-col justify-between overflow-hidden bg-white p-4 border border-gray-200 hover:border-[#00C6D7] transition-all duration-300 hover:shadow-lg h-full"
+      className="group relative flex flex-col justify-between overflow-hidden bg-white p-4 border border-gray-200 hover:border-brand transition-all duration-300 hover:shadow-lg h-full"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -3 }}
@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="text-[10px] text-gray-500 truncate uppercase tracking-wide">
           {product.category}
         </p>
-        <h3 className="text-sm font-normal text-[#00C6D7] line-clamp-2 h-[35px] leading-tight overflow-hidden">
+        <h3 className="text-sm font-normal text-brand line-clamp-2 h-[35px] leading-tight overflow-hidden">
           {product.title}
         </h3>
       </div>
@@ -47,13 +47,13 @@ export function ProductCard({ product }: ProductCardProps) {
            <span className="text-xs text-gray-400 line-through">
             RS {originalPrice}
           </span>
-          <span className="text-sm font-medium text-[#15ADB7]">
+          <span className="text-sm font-medium text-price">
             RS {product.price}
           </span>
         </div>
         
         <div>
-          <Button className="w-full bg-[#15ADB7] hover:bg-[#00b0bf] text-white h-9 text-xs font-normal">
+          <Button className="w-full bg-price hover:bg-brand-dark text-white h-9 text-xs font-normal">
             Add to cart
           </Button>
         </div>
