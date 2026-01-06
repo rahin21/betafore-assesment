@@ -54,18 +54,24 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-24 md:h-58 bg-linear-to-t from-white to-[#F3EDC9] -mt-2"></div>
       <Container className="relative">
         {/* Navigation Arrows */}
-        <button 
+        <motion.button 
           onClick={scrollLeft}
           className="absolute xl:-left-20 lg:-left-4 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
           aria-label="Previous"
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
         >
           <Image src="/leftArrowSli.svg" alt="Previous" width={24} height={40} className="xl:w-20 xl:h-20 lg:w-10 lg:h-10" />
-        </button>
+        </motion.button>
 
-        <button 
+        <motion.button 
           onClick={scrollRight}
           className="absolute xl:-right-20 lg:-right-4 top-1/2 -translate-y-1/2 z-10 p-2 hidden md:block"
           aria-label="Next"
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
         >
           <Image 
             src="/leftArrowSli.svg" 
@@ -74,7 +80,7 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
             height={40} 
             className="xl:w-20 xl:h-20 lg:w-10 lg:h-10 rotate-180" 
           />
-        </button>
+        </motion.button>
 
         {/* Slider Container */}
         <div 
@@ -87,8 +93,10 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
             <motion.div 
               key={index}
               className="relative min-w-[280px] md:min-w-[180px] xl:min-w-[330px] lg:min-w-[295px] aspect-[1.4] shrink-0 snap-start  overflow-visible pl-6"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
               whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
             >
               <div className="relative w-full h-full">
                 <Image

@@ -1,6 +1,8 @@
+'use client';
 import { Product } from "@/types";
 import Image from "next/image";
 import { Button } from "./Button";
+import { motion } from "framer-motion";
 
 interface ProductCardProps {
   product: Product;
@@ -14,7 +16,13 @@ export function ProductCard({ product }: ProductCardProps) {
   const originalPrice = (product.price * 1.2).toFixed(2);
 
   return (
-    <div className="group relative flex flex-col justify-between overflow-hidden bg-white p-4 border border-gray-200 hover:border-[#00C6D7] transition-all duration-300 hover:shadow-lg h-full">
+    <motion.div 
+      className="group relative flex flex-col justify-between overflow-hidden bg-white p-4 border border-gray-200 hover:border-[#00C6D7] transition-all duration-300 hover:shadow-lg h-full"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="flex flex-col gap-1 mb-4">
         <p className="text-[10px] text-gray-500 truncate uppercase tracking-wide">
           {product.category}
@@ -50,6 +58,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
