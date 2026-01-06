@@ -37,7 +37,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
       <Hero />
-      <ShopSlider />
+      <ShopSlider categories={categories} />
       <NewArrivals products={arrivalProducts} />
       <BestDeals products={bestDealProducts} categories={categories} />
     </main>

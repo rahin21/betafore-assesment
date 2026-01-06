@@ -4,18 +4,37 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Container } from "../ui/Container";
+import { Category } from "@/types";
 
-const categories = [
-  { name: "Electronics", image: "/shop-slider/ElectronicsShopImage.png" },
-  { name: "Fashion", image: "/shop-slider/FashionShopImage.png" },
-  { name: "Appliances", image: "/shop-slider/AppliancesShopImage.png" },
-  { name: "Babies Store", image: "/shop-slider/BabiesStoreShopImage.png" },
-  { name: "Home & Lifestyle", image: "/shop-slider/HomeLivestyleShop.png" },
-  { name: "WinMart", image: "/shop-slider/WinMartShopImage.png" },
+const staticImages = [
+  "/shop-slider/ElectronicsShopImage.png",
+  "/shop-slider/JewelryShopImage.png",
+  "/shop-slider/menClothingShopImage.png",
+  "/shop-slider/womenClothingShopImage.png",
 ];
 
-export function ShopSlider() {
+interface ShopSliderProps {
+  categories?: Category[];
+}
+
+export function ShopSlider({ categories = [] }: ShopSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  // If no categories provided or empty, fallback to static list or empty
+  // Assuming we want to show API categories using static images as placeholders
+  const sliderItems = categories.length > 0 
+    ? categories.map((cat, index) => ({
+        name: cat.name,
+        image: staticImages[index % staticImages.length]
+      }))
+    : [
+        { name: "Electronics", image: "/shop-slider/ElectronicsShopImage.png" },
+        { name: "Fashion", image: "/shop-slider/FashionShopImage.png" },
+        { name: "Appliances", image: "/shop-slider/AppliancesShopImage.png" },
+        { name: "Babies Store", image: "/shop-slider/BabiesStoreShopImage.png" },
+        { name: "Home & Lifestyle", image: "/shop-slider/HomeLivestyleShop.png" },
+        { name: "WinMart", image: "/shop-slider/WinMartShopImage.png" },
+      ];
   
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -60,14 +79,14 @@ export function ShopSlider() {
         {/* Slider Container */}
         <div 
           ref={containerRef}
-          className="flex gap-0 overflow-x-auto snap-x snap-mandatory md:pb-6 md:-ml-6 "
+          className="flex gap-0 overflow-x-auto snap-x snap-mandatory md:pb-6 xl:-ml-6 lg:-ml-2"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
 
-          {categories.map((cat, index) => (
+          {sliderItems.map((cat, index) => (
             <motion.div 
               key={index}
-              className="relative min-w-[280px] md:min-w-[180px] lg:min-w-[295px] aspect-[1.4] shrink-0 snap-start  overflow-visible pl-6"
+              className="relative min-w-[280px] md:min-w-[180px] xl:min-w-[330px] lg:min-w-[295px] aspect-[1.4] shrink-0 snap-start  overflow-visible pl-6"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
@@ -86,9 +105,9 @@ export function ShopSlider() {
                 ></div>
                 
                 {/* Text Bar */}
-                <div className="absolute bottom-8 left-[-9px] w-[220px] md:w-[95%] lg:w-[260px] h-[49px] bg-linear-to-r from-white to-white/85 shadow-[0px_1px_7px_0px_#00000091] flex items-center px-[15px] gap-[10px] z-30">
+                <div className="absolute bottom-8 left-[-9px] w-[220px] md:w-[95%] xl:w-[300px] h-[49px] bg-linear-to-r from-white to-white/85 shadow-[0px_1px_7px_0px_#00000091] flex items-center px-[15px] gap-[10px] z-30">
                    <div className="flex items-center justify-between w-full">
-                     <span className="text-[25px] md:text-[16px] lg:text-[25px] leading-[53px] font-normal text-[#000000] truncate">
+                     <span className="text-[25px] md:text-[16px] lg:text-[25px] leading-[53px] font-normal text-[#000000] truncate capitalize">
                        {cat.name}
                      </span>
                      <span className="text-[21px] md:text-[14px] lg:text-[21px] leading-[53px] font-normal text-[#14B1F0] cursor-pointer hover:underline whitespace-nowrap">
