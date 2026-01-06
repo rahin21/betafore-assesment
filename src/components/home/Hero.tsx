@@ -3,8 +3,18 @@ import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function Hero() {
+  const [slide, setSlide] = useState(0);
+  const desktopSlides = ["/heroImage.png", "/heroImage.png", "/heroImage.png"];
+  const mobileSlides = ["/heroImageMd.png", "/heroImageMd.png", "/heroImageMd.png"];
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSlide((s) => (s + 1) % desktopSlides.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, [desktopSlides.length]);
   return (
     <div className="relative w-full overflow-hidden bg-[#F3EDC9]">
       <div className="flex flex-col lg:hidden">
@@ -15,13 +25,24 @@ export function Hero() {
           transition={{ duration: 0.4 }}
         >
           <Image 
-            src="/heroImageMd.png" 
+            src={mobileSlides[slide]} 
             alt="Hero Background" 
             fill
             className="object-cover object-bottom"
             priority
           />
         </motion.div>
+        
+        <div className="flex items-center justify-center gap-3 py-2 md:py-3">
+          {mobileSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setSlide(i)}
+              className={`h-2 w-6 rounded-full ${i === slide ? "bg-[#03484D]" : "bg-[#A3A3A3]"}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
         
         <motion.div
           className="px-6 py-10 text-center space-y-6"
@@ -71,12 +92,22 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
            <Image 
-              src="/heroImage.png" 
+              src={desktopSlides[slide]} 
               alt="Hero Background" 
               fill
               className="object-contain object-center lg:object-fill"
               priority
            />
+           <div className="absolute lg:bottom-6 left-0 right-0 flex items-center justify-center gap-3">
+             {desktopSlides.map((_, i) => (
+               <button
+                 key={i}
+                 onClick={() => setSlide(i)}
+                 className={`h-2 w-8 rounded-full ${i === slide ? "bg-[#03484D]" : "bg-[#A3A3A3]"}`}
+                 aria-label={`Go to slide ${i + 1}`}
+               />
+             ))}
+           </div>
         </motion.div>
 
         <Container className="relative z-10 h-full">
