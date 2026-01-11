@@ -7,7 +7,7 @@ import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   return (
-    <header className="w-full relative z-50 font-sans">
+    <header className="w-full sticky top-0 z-50 font-sans">
       {/* Top Header */}
       <div className="bg-teal-dark text-white py-4">
         <Container>
