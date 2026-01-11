@@ -28,12 +28,10 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
         image: staticImages[index % staticImages.length]
       }))
     : [
-        { name: "Electronics", image: "/shop-slider/ElectronicsShopImage.png" },
-        { name: "Fashion", image: "/shop-slider/FashionShopImage.png" },
-        { name: "Appliances", image: "/shop-slider/AppliancesShopImage.png" },
-        { name: "Babies Store", image: "/shop-slider/BabiesStoreShopImage.png" },
-        { name: "Home & Lifestyle", image: "/shop-slider/HomeLivestyleShop.png" },
-        { name: "WinMart", image: "/shop-slider/WinMartShopImage.png" },
+        { name: "Electronics", image: staticImages[0] },
+        { name: "Jewelry", image: staticImages[1] },
+        { name: "Men's Clothing", image: staticImages[2] },
+        { name: "Women's Clothing", image: staticImages[3] },
       ];
   
   const scrollLeft = () => {

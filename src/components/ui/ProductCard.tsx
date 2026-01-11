@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 interface ProductCardProps {
   product: Product;
-  variant?: "default" | "horizontal";
 }
 
 export function ProductCard({ product }: ProductCardProps) {
