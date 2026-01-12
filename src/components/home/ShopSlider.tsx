@@ -21,7 +21,6 @@ export function ShopSlider({ categories = [] }: ShopSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
   // If no categories provided or empty, fallback to static list or empty
-  // Assuming we want to show API categories using static images as placeholders
   const sliderItems = categories.length > 0 
     ? categories.map((cat, index) => ({
         name: cat.name,
